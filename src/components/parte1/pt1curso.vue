@@ -25,6 +25,7 @@ export default {
     trocaTexto(titulo) {
       this.titulo = titulo.target.value;
     },
+    
     //^^ NÃO FUNCIONA POR CAUSA DO V-ONCE 
 
     /*saudacao () {

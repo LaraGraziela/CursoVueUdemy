@@ -36,7 +36,7 @@ export default {
         },
         alteraValor (event) {
             this.valor = event.target.value
-        }
+        },
     },
 
     //DESAFIO 3

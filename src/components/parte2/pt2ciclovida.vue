@@ -21,7 +21,7 @@
         <p>STRONG, EM, SMALL</p>
         <strong>Negrito: Lara</strong><br>
         <em>Itálico: Graziela</em><br>
-        <small>Texto pequeno: Diogos</small><br><br><br><hr><br>
+        <small>Texto pequeno: Diogo</small><br><br><br><hr><br>
 
         <h2>Contadores</h2>
         <div class="contador">
@@ -30,6 +30,7 @@
             <span>{{contador}}</span>
             <button @click="adicionar"> + </button>
             <button @click="subtrair"> - </button>
+            <br><br><br><hr><br>
         </div>
     </div>
   
