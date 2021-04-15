@@ -4,7 +4,7 @@
     <p>Vários detalhes...</p>
 
     <p>Nome do usuário: <strong>{{nome}}</strong></p>
-    <p>Idade do Usuário: <strong>{{idade}}</strong></p>
+    
     
   </div>
 </template>

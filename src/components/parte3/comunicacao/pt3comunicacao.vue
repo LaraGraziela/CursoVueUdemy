@@ -4,14 +4,15 @@
     <p>Componente!</p> <hr>
     <p>Nome: <strong>{{nome}} </strong></p>
     <p>Idade: <strong>{{idade}}</strong></p>
+    
 
     <button class="btn btn-light" @click="alteraNome">Alterar Nome</button>
 
     <div class="componentes">
         <Apppt3usuarioInfo :nome="nome"
-        :idade="idade"/>
+        />
         <Apppt3usuarioEditar
-        :idade="idade"/>
+        />
     </div>
   </div><br><br>
 
@@ -29,7 +30,7 @@ export default {
 
     data: () => ({
         nome: 'Pedro',
-        idade: 21
+       idade: 21
         
     }),
 
