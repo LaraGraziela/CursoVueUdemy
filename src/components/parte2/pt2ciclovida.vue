@@ -102,9 +102,10 @@ export default {
     height: 30px;
     width: 30px;
     border-radius: 15px;
-    background-color:coral;
+    background-color:rgb(51, 201, 108);
     margin-left: 10px;
     outline: none;
+    color: black;
 
 }
 </style>

@@ -3,9 +3,9 @@
     <h2>Informações de Usuário</h2>
     <p>Vários detalhes...</p>
 
-    <p>Nome do usuário: <strong>{{nome}}</strong></p>
-    
-    
+    <p>
+      Nome do usuário: <strong>{{ nome }}</strong>
+    </p>
   </div>
 </template>
 
@@ -14,11 +14,9 @@ export default {
   props: {
     nome: {
       type: String,
-      
     },
-    
   },
-}
+};
 </script>
 
 <style scoped>
@@ -29,5 +27,4 @@ export default {
   padding: 10px;
   border-radius: 5px;
 }
-
 </style>

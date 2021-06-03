@@ -1,9 +1,9 @@
 <template>
     <div id="all">
         <h2>Eventos</h2>
-
-        <button class="btn" @click="somar">Somar</button> |
-        <button class="btn" @click="subtrair">Subtrair</button>
+        <button class="btn" @click="subtrair">Subtrair</button> |
+        <button class="btn" @click="somar">Somar</button> 
+        
         <p>{{contador}}</p>
         <p>{{contador >= 0 ? 'Número positivo.' : 'Numero Negativo.'}}</p><br>
 
