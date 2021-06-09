@@ -17,7 +17,7 @@
           <tbody>
             <h4>Tarefas:</h4>
             <tr v-for="task in tasks" :key="task" style="list-style: none;">
-              <td>{{ task.id }} - {{ task.name }}</td>
+              <td class="text-left">{{ task.id }} - {{ task.name }}</td>
 
               <td class="col-sm-1">
                 <button class="btn btn-danger" @click="removeTask(task.id)">
@@ -32,6 +32,73 @@
       <div class="col-sm-4"></div>
     </div>
   </div>
+
+  <!-- CRIANDO UM INPUT CHECKBOX E DEPOIS FAZENDO ELE APARECER EM FORMATO DE LISTA DE ACORDO COM O CLIQUE DO USUÁRIO -->
+  <div class="row checkbox">
+    <div class="col-sm-6">
+      <h3>Checkbox</h3>
+      <h5>Selecione os itens que você tem em casa:</h5>
+
+      <!-- CRIANDO A OPÇÃO DE ADICIONAR UM NOVO CHECKBOX -->
+      <span>
+        <input type="text" v-model="moveisN" @keydown.enter="addMovel" />
+        <button class="btn btn-success" @click="addMovel">Adicionar</button>
+      </span>
+      <br /><br />
+
+      <span>
+        <input
+          v-model="moveis"
+          type="checkbox"
+          value="Geladeira"
+        />Geladeira</span
+      ><br />
+      <span
+        ><input
+          v-model="moveis"
+          type="checkbox"
+          value="Televisão"
+        />Televisão</span
+      ><br />
+      <span><input v-model="moveis" type="checkbox" value="Fogão" />Fogão</span
+      ><br />
+      <span
+        ><input
+          v-model="moveis"
+          type="checkbox"
+          value="Micro-ondas"
+        />Micro-ondas</span
+      ><br />
+      <span
+        ><input
+          v-model="moveis"
+          type="checkbox"
+          value="Cafeteira"
+        />Cafeteira</span
+      ><br />
+
+      <!-- MOSTRANDO O CHECKBOX DO QUE FOI DIGITADO -->
+      <div v-for="novoMovel in moveisLista" :key="novoMovel">
+        <input
+          v-model="moveis"
+          type="checkbox"
+          :value="novoMovel"
+          :name="novoMovel"
+          :id="novoMovel"
+        />{{ novoMovel }}
+      </div>
+
+      <br />
+    </div>
+
+    <div class="col-sm-6">
+      <h5>Itens selecionados:</h5>
+      <ul>
+        <li v-for="movel in moveis" :key="movel">{{ movel }}</li>
+      </ul>
+    </div>
+    <br /><br /><br /><br /><br /><br />
+  </div>
 </template>
 
 <script>
@@ -43,6 +110,9 @@ export default {
       { id: 3, name: "Cuidar da Tula" },
     ],
     inputTask: "",
+    moveis: [],
+    moveisN: "",
+    moveisLista: [],
   }),
   methods: {
     addTask() {
@@ -58,6 +128,11 @@ export default {
         }
       }
     },
+    //FUNÇÃO QUE COLOCA O MÓVEL DIGITADO NA LISTA APÓS CLICAR NO CHECKBOX
+    addMovel() {
+      this.moveisLista.push(this.moveisN);
+      console.log(this.moveisLista);
+    },
   },
 };
 </script>
@@ -71,6 +146,12 @@ export default {
 .lista {
   padding: 20px;
   box-shadow: 1px 1px 10px 1px rgb(168, 168, 168);
+  border-radius: 5px;
+}
+.checkbox {
+  padding: 20px;
+  box-shadow: 1px 1px 10px 1px rgb(202, 202, 202);
+  margin: 20px;
   border-radius: 5px;
 }
 </style>

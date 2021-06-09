@@ -14,9 +14,9 @@
 
     <div class="demo2" :style="cores"></div>
     <p>Digite uma cor em inglês e um número:</p>
-    <input type="text" v-model="cor"/><br>
-    <input type="text" v-model="largura">
-  </div>  
+    <input type="text" v-model="cor" /><br />
+    <input type="text" v-model="largura" />
+  </div>
 </template>
 
 <script>
@@ -26,8 +26,8 @@ export default {
     aplicarc2: false,
     aplicarc3: false,
 
-    cor: '',
-    largura: 100
+    cor: "",
+    largura: 100,
   }),
 
   computed: {
@@ -48,17 +48,17 @@ export default {
     },
 
     cores() {
-        return {
-            backgroundColor: this.cor,
-            width: this.largura + 'px'
-        }
-    }
+      return {
+        backgroundColor: this.cor,
+        width: this.largura + "px",
+      };
+    },
   },
 };
 </script>
 
 <style scoped>
-#all{
+#all {
   align-items: center;
   text-align: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -67,17 +67,13 @@ export default {
   width: 100px;
   height: 100px;
   background-color: rgb(206, 206, 206);
-  
 }
 
-.demo2{
+.demo2 {
   width: 100px;
   height: 100px;
   background-color: rgb(206, 206, 206);
- 
-  
 }
-
 
 #div {
   display: flex;
@@ -94,4 +90,3 @@ export default {
   background-color: deeppink;
 }
 </style>
-
