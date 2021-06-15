@@ -97,18 +97,14 @@
         <li v-for="movel in moveis" :key="movel">{{ movel }}</li>
       </ul>
     </div>
-    <br /><br /><br /><br /><br /><br />
   </div>
+  <br /><br /><br /><br />
 </template>
 
 <script>
 export default {
   data: () => ({
-    tasks: [
-      { id: 1, name: "Estudar" },
-      { id: 2, name: "Trabalhar" },
-      { id: 3, name: "Cuidar da Tula" },
-    ],
+    tasks: [],
     inputTask: "",
     moveis: [],
     moveisN: "",

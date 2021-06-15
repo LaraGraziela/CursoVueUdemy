@@ -11,6 +11,7 @@
   <pt2ciclovida />
   <pt3comunicacao />
   <listaTarefa />
+  <diretivas />
 </template>
 
 <script>
@@ -26,6 +27,7 @@ import pt2instancia from "./components/parte2/pt2instancia.vue";
 import pt2ciclovida from "./components/parte2/pt2ciclovida.vue";
 import pt3comunicacao from "./components/parte3/comunicacao/pt3comunicacao.vue";
 import listaTarefa from "./components/listaTarefa.vue";
+import Diretivas from "./components/parte4/diretivas.vue";
 
 export default {
   name: "app",
@@ -42,6 +44,7 @@ export default {
     pt2ciclovida,
     pt3comunicacao,
     listaTarefa,
+    Diretivas,
   },
 };
 </script>
